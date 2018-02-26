@@ -14,6 +14,7 @@
 		67C2A8612044C4C600F0DF24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8602044C4C600F0DF24 /* Assets.xcassets */; };
 		67C2A8642044C4C600F0DF24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8622044C4C600F0DF24 /* LaunchScreen.storyboard */; };
 		67C2A8732044CCAE00F0DF24 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8722044CCAE00F0DF24 /* BookListViewController.swift */; };
+		67C2A8752044D06500F0DF24 /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8742044D06500F0DF24 /* BookListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		67C2A8632044C4C600F0DF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C2A8652044C4C600F0DF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67C2A8722044CCAE00F0DF24 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		67C2A8742044D06500F0DF24 /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		67C2A86C2044C56100F0DF24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				67C2A8742044D06500F0DF24 /* BookListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				67C2A8592044C4C600F0DF24 /* ViewController.swift in Sources */,
 				67C2A8732044CCAE00F0DF24 /* BookListViewController.swift in Sources */,
 				67C2A8572044C4C600F0DF24 /* AppDelegate.swift in Sources */,
+				67C2A8752044D06500F0DF24 /* BookListTableViewCell.swift in Sources */,
 				67C2A85F2044C4C600F0DF24 /* BookGuru.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
