@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dpv-gH-E5U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ntq-Qr-oVl">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,8 +9,13 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Book List View Controller-->
+        <!--My Books-->
         <scene sceneID="h2t-L7-wCh">
             <objects>
                 <tableViewController id="dpv-gH-E5U" customClass="BookListViewController" customModule="BookGuru" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,13 +39,13 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-6E-lTi">
                                                             <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Get-CZ-ZGR">
                                                             <rect key="frame" x="0.0" y="30" width="172.66666666666666" height="29.666666666666671"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -74,25 +79,58 @@
                             <outlet property="delegate" destination="dpv-gH-E5U" id="Kxb-fH-wdD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="My Books" id="jMv-Bq-cdG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="UzA-29-sns"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="m03-FU-pPU"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ld-0f-eMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="13"/>
+            <point key="canvasLocation" x="1073" y="13"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Book View Controller-->
         <scene sceneID="TRE-aD-I7x">
             <objects>
-                <viewController id="ucd-rX-Ain" sceneMemberID="viewController">
+                <viewController id="ucd-rX-Ain" customClass="ShowBookViewController" customModule="BookGuru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JWw-6A-a0i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cY-NH-HHD" userLabel="mainStackView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="naF-AB-8La" firstAttribute="trailing" secondItem="3cY-NH-HHD" secondAttribute="trailing" id="Mg4-ac-Ziu"/>
+                            <constraint firstItem="naF-AB-8La" firstAttribute="bottom" secondItem="3cY-NH-HHD" secondAttribute="bottom" id="lkA-2T-cJ0"/>
+                            <constraint firstItem="3cY-NH-HHD" firstAttribute="top" secondItem="naF-AB-8La" secondAttribute="top" id="tAN-QT-jvf"/>
+                            <constraint firstItem="3cY-NH-HHD" firstAttribute="leading" secondItem="naF-AB-8La" secondAttribute="leading" id="yuQ-WM-MdQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="naF-AB-8La"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLV-B6-4JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="14"/>
+            <point key="canvasLocation" x="1849" y="13"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cnW-1C-NXI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ntq-Qr-oVl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UWK-kL-6dQ">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dpv-gH-E5U" kind="relationship" relationship="rootViewController" id="Mws-aS-HuE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nb-8I-qGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="13"/>
         </scene>
     </scenes>
     <resources>
