@@ -18,12 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookViewControllerCell" id="ul0-OD-Eqc" customClass="BookViewControllerCell" customModule="BookGuru" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookViewControllerCell" rowHeight="60" id="ul0-OD-Eqc" customClass="BookViewControllerCell" customModule="BookGuru" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ul0-OD-Eqc" id="bUw-3p-aee">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="59.666666666666664"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mT2-z3-vVf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="59.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-6E-lTi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Get-CZ-ZGR">
+                                                            <rect key="frame" x="0.0" y="30" width="172.66666666666666" height="29.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Get-CZ-ZGR" firstAttribute="height" secondItem="ZHN-6E-lTi" secondAttribute="height" id="cC8-ut-yCl"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
+                                                    <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="59.666666666666664"/>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="j6J-bS-ex4" secondAttribute="trailing" constant="15" id="HE9-tl-s2z"/>
+                                        <constraint firstItem="j6J-bS-ex4" firstAttribute="leading" secondItem="bUw-3p-aee" secondAttribute="leading" constant="15" id="a2F-IM-XmS"/>
+                                        <constraint firstAttribute="bottom" secondItem="j6J-bS-ex4" secondAttribute="bottom" id="bWW-xG-M38"/>
+                                        <constraint firstItem="j6J-bS-ex4" firstAttribute="top" secondItem="bUw-3p-aee" secondAttribute="top" id="dlF-nm-NSy"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

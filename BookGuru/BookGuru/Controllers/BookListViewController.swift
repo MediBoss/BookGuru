@@ -14,16 +14,20 @@ class BookListViewController : UITableViewController{
         super.viewDidLoad()
     }
     
+    // - MARK : UITableView Data Source Methods
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 1
+        
         return 10
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 2
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookViewControllerCell", for: indexPath)
         cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
         
         return cell
     }
+    
+    
 }
