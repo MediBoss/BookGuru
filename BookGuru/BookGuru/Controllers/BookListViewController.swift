@@ -30,7 +30,7 @@ class BookListViewController : UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookViewControllerCell", for: indexPath) as! BookViewControllerCell
         let book = userBooks[indexPath.row]
         cell.authorNameLabel.text = book.authorName
-        cell.modificationTimeLabel.text = book.modificationTime.convertToString()
+        cell.modificationTimeLabel.text = book.modificationTime.dateToStringConversion()
         
         return cell
     }
