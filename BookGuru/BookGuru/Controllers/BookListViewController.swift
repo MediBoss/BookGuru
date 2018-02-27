@@ -7,28 +7,23 @@
 //
 
 import UIKit
-import CoreData
 
-class BookListViewController: UITableViewController{
+class BookListViewController : UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    
-    
-    // - MARK : UITableView Methods
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 0
+        // 1
+        return 10
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookListTableViewCell", for: indexPath)
+        // 2
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookViewControllerCell", for: indexPath)
+        cell.textLabel?.text = "Cell Row: \(indexPath.row) Section: \(indexPath.section)"
         
         return cell
     }
- 
 }

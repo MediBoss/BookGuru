@@ -1,5 +1,5 @@
 //
-//  BookListTableViewCell.swift
+//  BookViewControllerCell.swift
 //  BookGuru
 //
 //  Created by Assumani, Medi on 2/26/18.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class BookListTableViewCell : UITableViewCell{
+class BookViewControllerCell : UITableViewCell{
     
 }

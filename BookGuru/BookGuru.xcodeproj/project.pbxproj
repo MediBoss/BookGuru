@@ -7,31 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67C2A8572044C4C600F0DF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8562044C4C600F0DF24 /* AppDelegate.swift */; };
-		67C2A8592044C4C600F0DF24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8582044C4C600F0DF24 /* ViewController.swift */; };
-		67C2A85C2044C4C600F0DF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A85A2044C4C600F0DF24 /* Main.storyboard */; };
-		67C2A85F2044C4C600F0DF24 /* BookGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A85D2044C4C600F0DF24 /* BookGuru.xcdatamodeld */; };
-		67C2A8612044C4C600F0DF24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8602044C4C600F0DF24 /* Assets.xcassets */; };
-		67C2A8642044C4C600F0DF24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8622044C4C600F0DF24 /* LaunchScreen.storyboard */; };
-		67C2A8732044CCAE00F0DF24 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8722044CCAE00F0DF24 /* BookListViewController.swift */; };
-		67C2A8752044D06500F0DF24 /* BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8742044D06500F0DF24 /* BookListTableViewCell.swift */; };
+		67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8822044E11600F0DF24 /* AppDelegate.swift */; };
+		67C2A8882044E11600F0DF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8862044E11600F0DF24 /* Main.storyboard */; };
+		67C2A88B2044E11600F0DF24 /* BookGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8892044E11600F0DF24 /* BookGuru.xcdatamodeld */; };
+		67C2A88D2044E11600F0DF24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A88C2044E11600F0DF24 /* Assets.xcassets */; };
+		67C2A8902044E11600F0DF24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A88E2044E11600F0DF24 /* LaunchScreen.storyboard */; };
+		67C2A8A32044E1F500F0DF24 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8A22044E1F500F0DF24 /* BookListViewController.swift */; };
+		67C2A8A52044E21100F0DF24 /* BookViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8A42044E21100F0DF24 /* BookViewControllerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		67C2A8532044C4C600F0DF24 /* BookGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		67C2A8562044C4C600F0DF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		67C2A8582044C4C600F0DF24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		67C2A85B2044C4C600F0DF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		67C2A85E2044C4C600F0DF24 /* BookGuru.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookGuru.xcdatamodel; sourceTree = "<group>"; };
-		67C2A8602044C4C600F0DF24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		67C2A8632044C4C600F0DF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		67C2A8652044C4C600F0DF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67C2A8722044CCAE00F0DF24 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
-		67C2A8742044D06500F0DF24 /* BookListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListTableViewCell.swift; sourceTree = "<group>"; };
+		67C2A87F2044E11600F0DF24 /* BookGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C2A8822044E11600F0DF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		67C2A8872044E11600F0DF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67C2A88A2044E11600F0DF24 /* BookGuru.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookGuru.xcdatamodel; sourceTree = "<group>"; };
+		67C2A88C2044E11600F0DF24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		67C2A88F2044E11600F0DF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		67C2A8912044E11600F0DF24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C2A8A22044E1F500F0DF24 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		67C2A8A42044E21100F0DF24 /* BookViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewControllerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		67C2A8502044C4C600F0DF24 /* Frameworks */ = {
+		67C2A87C2044E11600F0DF24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,88 +39,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		67C2A84A2044C4C600F0DF24 = {
+		67C2A8762044E11600F0DF24 = {
 			isa = PBXGroup;
 			children = (
-				67C2A8552044C4C600F0DF24 /* BookGuru */,
-				67C2A8542044C4C600F0DF24 /* Products */,
+				67C2A8812044E11600F0DF24 /* BookGuru */,
+				67C2A8802044E11600F0DF24 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		67C2A8542044C4C600F0DF24 /* Products */ = {
+		67C2A8802044E11600F0DF24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67C2A8532044C4C600F0DF24 /* BookGuru.app */,
+				67C2A87F2044E11600F0DF24 /* BookGuru.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67C2A8552044C4C600F0DF24 /* BookGuru */ = {
+		67C2A8812044E11600F0DF24 /* BookGuru */ = {
 			isa = PBXGroup;
 			children = (
-				67C2A8712044C5A100F0DF24 /* CoreData */,
-				67C2A8702044C59100F0DF24 /* Extensions */,
-				67C2A86E2044C57600F0DF24 /* Models */,
-				67C2A86C2044C56100F0DF24 /* Views */,
-				67C2A86B2044C55000F0DF24 /* Controllers */,
-				67C2A8562044C4C600F0DF24 /* AppDelegate.swift */,
-				67C2A8582044C4C600F0DF24 /* ViewController.swift */,
-				67C2A85A2044C4C600F0DF24 /* Main.storyboard */,
-				67C2A8602044C4C600F0DF24 /* Assets.xcassets */,
-				67C2A8622044C4C600F0DF24 /* LaunchScreen.storyboard */,
-				67C2A8652044C4C600F0DF24 /* Info.plist */,
-				67C2A85D2044C4C600F0DF24 /* BookGuru.xcdatamodeld */,
+				67C2A8A12044E1DD00F0DF24 /* Controllers */,
+				67C2A89F2044E1C900F0DF24 /* Views */,
+				67C2A89D2044E19E00F0DF24 /* Models */,
+				67C2A8822044E11600F0DF24 /* AppDelegate.swift */,
+				67C2A8862044E11600F0DF24 /* Main.storyboard */,
+				67C2A88C2044E11600F0DF24 /* Assets.xcassets */,
+				67C2A88E2044E11600F0DF24 /* LaunchScreen.storyboard */,
+				67C2A8912044E11600F0DF24 /* Info.plist */,
+				67C2A8892044E11600F0DF24 /* BookGuru.xcdatamodeld */,
 			);
 			path = BookGuru;
 			sourceTree = "<group>";
 		};
-		67C2A86B2044C55000F0DF24 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				67C2A8722044CCAE00F0DF24 /* BookListViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		67C2A86C2044C56100F0DF24 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				67C2A8742044D06500F0DF24 /* BookListTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		67C2A86E2044C57600F0DF24 /* Models */ = {
+		67C2A89D2044E19E00F0DF24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		67C2A8702044C59100F0DF24 /* Extensions */ = {
+		67C2A89F2044E1C900F0DF24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				67C2A8A42044E21100F0DF24 /* BookViewControllerCell.swift */,
 			);
-			path = Extensions;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		67C2A8712044C5A100F0DF24 /* CoreData */ = {
+		67C2A8A12044E1DD00F0DF24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				67C2A8A22044E1F500F0DF24 /* BookListViewController.swift */,
 			);
-			path = CoreData;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67C2A8522044C4C600F0DF24 /* BookGuru */ = {
+		67C2A87E2044E11600F0DF24 /* BookGuru */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67C2A8682044C4C600F0DF24 /* Build configuration list for PBXNativeTarget "BookGuru" */;
+			buildConfigurationList = 67C2A8942044E11600F0DF24 /* Build configuration list for PBXNativeTarget "BookGuru" */;
 			buildPhases = (
-				67C2A84F2044C4C600F0DF24 /* Sources */,
-				67C2A8502044C4C600F0DF24 /* Frameworks */,
-				67C2A8512044C4C600F0DF24 /* Resources */,
+				67C2A87B2044E11600F0DF24 /* Sources */,
+				67C2A87C2044E11600F0DF24 /* Frameworks */,
+				67C2A87D2044E11600F0DF24 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -130,26 +111,26 @@
 			);
 			name = BookGuru;
 			productName = BookGuru;
-			productReference = 67C2A8532044C4C600F0DF24 /* BookGuru.app */;
+			productReference = 67C2A87F2044E11600F0DF24 /* BookGuru.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		67C2A84B2044C4C600F0DF24 /* Project object */ = {
+		67C2A8772044E11600F0DF24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Assumani, Medi";
 				TargetAttributes = {
-					67C2A8522044C4C600F0DF24 = {
+					67C2A87E2044E11600F0DF24 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 67C2A84E2044C4C600F0DF24 /* Build configuration list for PBXProject "BookGuru" */;
+			buildConfigurationList = 67C2A87A2044E11600F0DF24 /* Build configuration list for PBXProject "BookGuru" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,57 +138,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 67C2A84A2044C4C600F0DF24;
-			productRefGroup = 67C2A8542044C4C600F0DF24 /* Products */;
+			mainGroup = 67C2A8762044E11600F0DF24;
+			productRefGroup = 67C2A8802044E11600F0DF24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67C2A8522044C4C600F0DF24 /* BookGuru */,
+				67C2A87E2044E11600F0DF24 /* BookGuru */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		67C2A8512044C4C600F0DF24 /* Resources */ = {
+		67C2A87D2044E11600F0DF24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C2A8642044C4C600F0DF24 /* LaunchScreen.storyboard in Resources */,
-				67C2A8612044C4C600F0DF24 /* Assets.xcassets in Resources */,
-				67C2A85C2044C4C600F0DF24 /* Main.storyboard in Resources */,
+				67C2A8902044E11600F0DF24 /* LaunchScreen.storyboard in Resources */,
+				67C2A88D2044E11600F0DF24 /* Assets.xcassets in Resources */,
+				67C2A8882044E11600F0DF24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		67C2A84F2044C4C600F0DF24 /* Sources */ = {
+		67C2A87B2044E11600F0DF24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C2A8592044C4C600F0DF24 /* ViewController.swift in Sources */,
-				67C2A8732044CCAE00F0DF24 /* BookListViewController.swift in Sources */,
-				67C2A8572044C4C600F0DF24 /* AppDelegate.swift in Sources */,
-				67C2A8752044D06500F0DF24 /* BookListTableViewCell.swift in Sources */,
-				67C2A85F2044C4C600F0DF24 /* BookGuru.xcdatamodeld in Sources */,
+				67C2A8A32044E1F500F0DF24 /* BookListViewController.swift in Sources */,
+				67C2A8A52044E21100F0DF24 /* BookViewControllerCell.swift in Sources */,
+				67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */,
+				67C2A88B2044E11600F0DF24 /* BookGuru.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67C2A85A2044C4C600F0DF24 /* Main.storyboard */ = {
+		67C2A8862044E11600F0DF24 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				67C2A85B2044C4C600F0DF24 /* Base */,
+				67C2A8872044E11600F0DF24 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		67C2A8622044C4C600F0DF24 /* LaunchScreen.storyboard */ = {
+		67C2A88E2044E11600F0DF24 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				67C2A8632044C4C600F0DF24 /* Base */,
+				67C2A88F2044E11600F0DF24 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -215,7 +195,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		67C2A8662044C4C600F0DF24 /* Debug */ = {
+		67C2A8922044E11600F0DF24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,7 +252,7 @@
 			};
 			name = Debug;
 		};
-		67C2A8672044C4C600F0DF24 /* Release */ = {
+		67C2A8932044E11600F0DF24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -322,7 +302,7 @@
 			};
 			name = Release;
 		};
-		67C2A8692044C4C600F0DF24 /* Debug */ = {
+		67C2A8952044E11600F0DF24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -337,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		67C2A86A2044C4C600F0DF24 /* Release */ = {
+		67C2A8962044E11600F0DF24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -355,20 +335,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67C2A84E2044C4C600F0DF24 /* Build configuration list for PBXProject "BookGuru" */ = {
+		67C2A87A2044E11600F0DF24 /* Build configuration list for PBXProject "BookGuru" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67C2A8662044C4C600F0DF24 /* Debug */,
-				67C2A8672044C4C600F0DF24 /* Release */,
+				67C2A8922044E11600F0DF24 /* Debug */,
+				67C2A8932044E11600F0DF24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67C2A8682044C4C600F0DF24 /* Build configuration list for PBXNativeTarget "BookGuru" */ = {
+		67C2A8942044E11600F0DF24 /* Build configuration list for PBXNativeTarget "BookGuru" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67C2A8692044C4C600F0DF24 /* Debug */,
-				67C2A86A2044C4C600F0DF24 /* Release */,
+				67C2A8952044E11600F0DF24 /* Debug */,
+				67C2A8962044E11600F0DF24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -376,17 +356,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		67C2A85D2044C4C600F0DF24 /* BookGuru.xcdatamodeld */ = {
+		67C2A8892044E11600F0DF24 /* BookGuru.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				67C2A85E2044C4C600F0DF24 /* BookGuru.xcdatamodel */,
+				67C2A88A2044E11600F0DF24 /* BookGuru.xcdatamodel */,
 			);
-			currentVersion = 67C2A85E2044C4C600F0DF24 /* BookGuru.xcdatamodel */;
+			currentVersion = 67C2A88A2044E11600F0DF24 /* BookGuru.xcdatamodel */;
 			path = BookGuru.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 67C2A84B2044C4C600F0DF24 /* Project object */;
+	rootObject = 67C2A8772044E11600F0DF24 /* Project object */;
 }
