@@ -48,7 +48,7 @@
                                                         <constraint firstItem="Get-CZ-ZGR" firstAttribute="height" secondItem="ZHN-6E-lTi" secondAttribute="height" id="cC8-ut-yCl"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book4" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
                                                     <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="59.666666666666664"/>
                                                 </imageView>
                                             </subviews>
@@ -80,6 +80,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" width="170" height="170"/>
+        <image name="book4" width="89" height="62"/>
     </resources>
 </document>
