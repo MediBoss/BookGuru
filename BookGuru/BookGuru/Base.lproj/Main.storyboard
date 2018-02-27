@@ -25,10 +25,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4" userLabel="mainCellStackView">
                                             <rect key="frame" x="15" y="0.0" width="345" height="59.666666666666664"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mT2-z3-vVf">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mT2-z3-vVf" userLabel="labelsStackView">
                                                     <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="59.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-6E-lTi">
@@ -48,7 +48,7 @@
                                                         <constraint firstItem="Get-CZ-ZGR" firstAttribute="height" secondItem="ZHN-6E-lTi" secondAttribute="height" id="cC8-ut-yCl"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
                                                     <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="59.666666666666664"/>
                                                 </imageView>
                                             </subviews>
@@ -61,6 +61,11 @@
                                         <constraint firstItem="j6J-bS-ex4" firstAttribute="top" secondItem="bUw-3p-aee" secondAttribute="top" id="dlF-nm-NSy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="authorNameLabel" destination="ZHN-6E-lTi" id="qlM-sX-vCf"/>
+                                    <outlet property="bookImage" destination="8UA-I3-4qB" id="HFC-rF-y4K"/>
+                                    <outlet property="modificationTimeLabel" destination="Get-CZ-ZGR" id="f7i-py-oJm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -74,4 +79,7 @@
             <point key="canvasLocation" x="879" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" width="170" height="170"/>
+    </resources>
 </document>
