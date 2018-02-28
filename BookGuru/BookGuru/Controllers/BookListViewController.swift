@@ -12,7 +12,7 @@ class BookListViewController : UITableViewController{
     
     // - MAKR : Properties
     
-    // Creates a dynamic array of type bookto store each book's information
+    // Creates a dynamic array of type Bookt store each book's information
     var userBooks = [Book]()
     
     override func viewDidLoad() {
@@ -23,7 +23,7 @@ class BookListViewController : UITableViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-       return 5
+    return userBooks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

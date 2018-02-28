@@ -11,5 +11,9 @@ import UIKit
 import CoreData
 
 class ShowBookViewController : UIViewController{
-    
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }

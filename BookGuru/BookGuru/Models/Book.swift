@@ -14,5 +14,6 @@ class Book{
     var modificationTime = Date()
     var lastPageRead : Int = 0
     var lastLinePage : Int?
+    var bookOrPdf : Bool?
     
 }
