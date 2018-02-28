@@ -39,14 +39,14 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-6E-lTi">
                                                             <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="30"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Get-CZ-ZGR">
                                                             <rect key="frame" x="0.0" y="30" width="172.66666666666666" height="29.666666666666671"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="10"/>
+                                                            <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -142,11 +142,20 @@
                         <viewLayoutGuide key="safeArea" id="naF-AB-8La"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zLf-a5-H8d">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GcJ-gG-Lqo"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WAS-yk-mgB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GcJ-gG-Lqo">
+                            <connections>
+                                <segue destination="kqE-VU-lnN" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="blS-Wm-d5H"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WAS-yk-mgB">
+                            <connections>
+                                <segue destination="kqE-VU-lnN" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="fkf-s1-sk3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLV-B6-4JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kqE-VU-lnN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1821.5999999999999" y="12.561576354679804"/>
         </scene>
