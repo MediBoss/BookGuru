@@ -6,9 +6,21 @@
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CoreData
+
+/*
+            ShowBookViewController
+            **********************
+ 
+ This view controller manages the settings, logics,
+ logics, and segue when the user clicks on a specific
+ book cell. Most of the UI is done on the storyboard,
+ therefore Segue triggers and CoreData are handled here
+
+ */
+
+
 
 class ShowBookViewController : UIViewController{
    

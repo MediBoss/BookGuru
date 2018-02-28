@@ -6,7 +6,21 @@
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
 
+/*
+                BookListViewController
+                **********************
+ 
+ This View controller manages the app's home page that is
+ made up of TableViewCells of the UITableViewController
+ class. It implements important DataSource methods, keep
+ tracks of secgues triggers, and Data Persistence between
+ App Lunches using the CoreData Framework.
+ */
+
+
+
 import UIKit
+import CoreData
 
 class BookListViewController : UITableViewController{
     
@@ -46,11 +60,15 @@ class BookListViewController : UITableViewController{
                 print("switching to Show Book VC")
             case "addBook" :
                 print("creating new book")
+            case "preferences":
+                print("switching to show Preferences VC")
             default :
                 print("Unexpected Segue Identifier")
         }
     }
 
+    
+    // This Function handles the pop segue to avoid memory leaks by using an unwind segue
     @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
         //empty at the moment
     }
