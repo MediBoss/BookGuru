@@ -14,6 +14,5 @@ class ShowBookViewController : UIViewController{
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

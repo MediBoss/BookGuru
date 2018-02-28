@@ -35,5 +35,21 @@ class BookListViewController : UITableViewController{
         return cell
     }
     
+    // - MARK : SEGUES
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let identifier = segue.identifier else {return}
+        
+        switch identifier{
+            case "displayBook":
+                print("switching to Show Book VC")
+            case "addBook" :
+                print("creating new book")
+            default :
+                print("Unexpected Segue Identifier")
+        }
+    }
+    
     
 }
