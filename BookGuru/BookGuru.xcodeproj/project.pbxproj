@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6779DECE2046F01E000D9B9C /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */; };
 		67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8822044E11600F0DF24 /* AppDelegate.swift */; };
 		67C2A8882044E11600F0DF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8862044E11600F0DF24 /* Main.storyboard */; };
 		67C2A88B2044E11600F0DF24 /* BookGuru.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8892044E11600F0DF24 /* BookGuru.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
 		67C2A87F2044E11600F0DF24 /* BookGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C2A8822044E11600F0DF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C2A8872044E11600F0DF24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				67C2A8A22044E1F500F0DF24 /* BookListViewController.swift */,
 				67C2A8AD20461E8A00F0DF24 /* ShowBookViewController.swift */,
+				6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */,
 				67C2A8AE20461E8A00F0DF24 /* ShowBookViewController.swift in Sources */,
 				67C2A8A92046143400F0DF24 /* Book.swift in Sources */,
+				6779DECE2046F01E000D9B9C /* UserPreferencesViewController.swift in Sources */,
 				67C2A88B2044E11600F0DF24 /* BookGuru.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

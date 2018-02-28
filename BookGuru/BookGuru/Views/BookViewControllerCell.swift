@@ -10,7 +10,7 @@ import UIKit
 
 class BookViewControllerCell : UITableViewCell{
     
-    @IBOutlet weak var authorNameLabel: UILabel!
+    @IBOutlet weak var bookName: UILabel!
     @IBOutlet weak var modificationTimeLabel: UILabel!
     @IBOutlet weak var bookImage: UIImageView!
     

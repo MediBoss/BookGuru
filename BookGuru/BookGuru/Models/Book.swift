@@ -10,6 +10,7 @@ import UIKit
 
 class Book{
     
+    var bookName = ""
     var authorName = ""
     var modificationTime = Date()
     var lastPageRead : Int = 0
