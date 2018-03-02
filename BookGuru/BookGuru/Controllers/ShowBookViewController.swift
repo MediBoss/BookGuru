@@ -61,8 +61,6 @@ class ShowBookViewController : UIViewController{
             book.authorName = bookNameTextField.text ?? ""
             book.modificationTime = Date()
 
-            
-            
         case "cancel":
             print("cancel bar button item tapped")
             
