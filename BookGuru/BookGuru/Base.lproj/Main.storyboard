@@ -95,7 +95,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ld-0f-eMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="13"/>
+            <point key="canvasLocation" x="1052" y="13"/>
         </scene>
         <!--Title-->
         <scene sceneID="TRE-aD-I7x">
@@ -105,44 +105,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastLineRead" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEY-5Z-58X" userLabel="LastLineRead">
-                                <rect key="frame" x="118" y="360" width="138" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BookName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0V-8R-eW5">
-                                <rect key="frame" x="0.0" y="117" width="375" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiE-Jx-qM0">
-                                <rect key="frame" x="90" y="217" width="195" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastPageRead" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X72-nJ-T5D">
-                                <rect key="frame" x="118" y="289" width="138" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8zF-Aj-DbT">
-                                <rect key="frame" x="65" y="478" width="244" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Book"/>
-                                    <segment title="PDF"/>
-                                </segments>
-                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hka-Q2-BH5">
+                                <rect key="frame" x="50" y="188" width="275" height="490"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-by-UaX" userLabel="bookName">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="98"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-a7-Qwp" userLabel="auhtorName">
+                                        <rect key="frame" x="0.0" y="98" width="275" height="98"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Page Read" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yiD-jg-HVX" userLabel="lastPageRead">
+                                        <rect key="frame" x="0.0" y="196" width="275" height="98"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Line Read" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ns-ZY-NBK" userLabel="lastLineRead">
+                                        <rect key="frame" x="0.0" y="294" width="275" height="98"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-ge-m5M">
+                                        <rect key="frame" x="0.0" y="392" width="275" height="99"/>
+                                        <segments>
+                                            <segment title="Book"/>
+                                            <segment title="PDF"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1ns-ZY-NBK" firstAttribute="height" secondItem="hU9-by-UaX" secondAttribute="height" id="8YG-AZ-wez"/>
+                                    <constraint firstItem="yiD-jg-HVX" firstAttribute="height" secondItem="hU9-by-UaX" secondAttribute="height" id="MzU-km-kUh"/>
+                                    <constraint firstItem="aqa-a7-Qwp" firstAttribute="height" secondItem="hU9-by-UaX" secondAttribute="height" id="Vlh-5h-bM2"/>
+                                    <constraint firstItem="uNK-ge-m5M" firstAttribute="height" secondItem="hU9-by-UaX" secondAttribute="height" id="zsT-k6-Lfd"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="naF-AB-8La" firstAttribute="trailing" secondItem="hka-Q2-BH5" secondAttribute="trailing" constant="50" id="2Zt-PC-adn"/>
+                            <constraint firstItem="hka-Q2-BH5" firstAttribute="top" secondItem="naF-AB-8La" secondAttribute="top" constant="100" id="6hG-2W-Sbo"/>
+                            <constraint firstItem="naF-AB-8La" firstAttribute="bottom" secondItem="hka-Q2-BH5" secondAttribute="bottom" constant="100" id="Dbc-B4-htg"/>
+                            <constraint firstItem="hka-Q2-BH5" firstAttribute="leading" secondItem="naF-AB-8La" secondAttribute="leading" constant="50" id="yox-H4-1XF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="naF-AB-8La"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zLf-a5-H8d">
@@ -157,11 +169,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authorTextField" destination="aqa-a7-Qwp" id="d8q-0D-Dja"/>
+                        <outlet property="bookNameTextField" destination="hU9-by-UaX" id="yx2-0v-voU"/>
+                        <outlet property="bookOrPdf" destination="uNK-ge-m5M" id="WhT-Lj-bKk"/>
+                        <outlet property="lastLineReadTextField" destination="1ns-ZY-NBK" id="Gwo-m9-TQD"/>
+                        <outlet property="lastPageReadTextField" destination="yiD-jg-HVX" id="faP-Os-MIs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLV-B6-4JG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kqE-VU-lnN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1610" y="13"/>
+            <point key="canvasLocation" x="1863" y="13"/>
         </scene>
         <!--Usere Preferences View Controller-->
         <scene sceneID="tV2-4R-pLq">

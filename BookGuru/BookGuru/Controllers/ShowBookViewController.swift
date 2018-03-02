@@ -24,8 +24,29 @@ import CoreData
 
 class ShowBookViewController : UIViewController{
    
+    // - MARK : IBOULETS
+    
+    @IBOutlet weak var bookNameTextField: UITextField!
+    @IBOutlet weak var authorTextField: UITextField!
+    @IBOutlet weak var lastPageReadTextField: UITextField!
+    @IBOutlet weak var lastLineReadTextField: UITextField!
+    @IBOutlet weak var bookOrPdf: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+        bookNameTextField.text = ""
+        authorTextField.text = ""
+        lastPageReadTextField.text = ""
+        lastLineReadTextField.text = ""
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,7 +54,14 @@ class ShowBookViewController : UIViewController{
         
         switch segueIdentifier {
         case "save":
-            print("save bar button item tapped")
+            
+            let book = Book()
+            
+            book.bookName = bookNameTextField.text ?? ""
+            book.authorName = bookNameTextField.text ?? ""
+            book.modificationTime = Date()
+
+            
             
         case "cancel":
             print("cancel bar button item tapped")

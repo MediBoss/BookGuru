@@ -24,14 +24,15 @@ import CoreData
 
 class BookListViewController : UITableViewController{
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
     // - MAKR : Properties
     
     // Creates a dynamic array of type Bookt store each book's information
     var userBooks = [Book]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     // - MARK : UITableView Data Source Methods
     
@@ -41,10 +42,11 @@ class BookListViewController : UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookViewControllerCell", for: indexPath) as! BookViewControllerCell
-        //let book = userBooks[10]
-        //cell.authorNameLabel.text = book.authorName
-        //cell.modificationTimeLabel.text = book.modificationTime.dateToStringConversion()
+        let book = userBooks[indexPath.row]
+        cell.bookName.text = book.bookName
+        cell.modificationTimeLabel.text = book.modificationTime.dateToStringConversion()
         
         return cell
     }
