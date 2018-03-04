@@ -63,6 +63,14 @@ class ShowBookViewController : UIViewController{
             book.authorName = authorTextField.text ?? ""
             book.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter())!
             book.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter())!
+            book.modificationTime = Date()
+            
+            //transfering data from one view controller to another
+            
+            let destination = segue.destination as! BookListViewController
+            destination.userBooks.append(book)
+            
+           
 
         case "cancel":
             print("cancel bar button item tapped")

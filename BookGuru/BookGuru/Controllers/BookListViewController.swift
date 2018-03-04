@@ -31,7 +31,11 @@ class BookListViewController : UITableViewController{
     // - MAKR : Properties
     
     // Creates a dynamic array of type Bookt store each book's information
-    var userBooks = [Book]()
+    var userBooks = [Book](){
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     
     // - MARK : UITableView Data Source Methods
