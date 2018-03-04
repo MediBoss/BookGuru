@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AmericanTypewriter.ttc">
-            <string>AmericanTypewriter</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--My Books-->
         <scene sceneID="h2t-L7-wCh">
@@ -31,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4" userLabel="mainCellStackView">
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4" userLabel="mainCellStackView">
                                             <rect key="frame" x="15" y="0.0" width="345" height="59.666666666666664"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mT2-z3-vVf" userLabel="labelsStackView">
@@ -39,13 +34,13 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-6E-lTi">
                                                             <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="30"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Get-CZ-ZGR">
                                                             <rect key="frame" x="0.0" y="30" width="172.66666666666666" height="29.666666666666671"/>
-                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="10"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -54,7 +49,7 @@
                                                         <constraint firstItem="Get-CZ-ZGR" firstAttribute="height" secondItem="ZHN-6E-lTi" secondAttribute="height" id="cC8-ut-yCl"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book4" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
                                                     <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="59.666666666666664"/>
                                                 </imageView>
                                             </subviews>
@@ -95,7 +90,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ld-0f-eMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052" y="13"/>
+            <point key="canvasLocation" x="1052" y="12.561576354679804"/>
         </scene>
         <!--Title-->
         <scene sceneID="TRE-aD-I7x">
@@ -216,9 +211,6 @@
             <point key="canvasLocation" x="286" y="13"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="book4" width="89" height="62"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PM9-sc-xfh"/>
     </inferredMetricsTieBreakers>

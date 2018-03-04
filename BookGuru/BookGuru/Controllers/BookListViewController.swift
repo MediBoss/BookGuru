@@ -51,7 +51,7 @@ class BookListViewController : UITableViewController{
         let book = userBooks[indexPath.row]
         cell.bookName.text = book.bookName
         cell.modificationTimeLabel.text = book.modificationTime.dateToStringConversion()
-        
+        cell.bookImage.image = book.bookImage
         return cell
     }
     

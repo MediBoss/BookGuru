@@ -59,13 +59,21 @@ class ShowBookViewController : UIViewController{
             
             let book = Book()
             
+                //Initializing each book property
             book.bookName = bookNameTextField.text ?? ""
             book.authorName = authorTextField.text ?? ""
             book.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter())!
             book.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter())!
             book.modificationTime = Date()
             
-            //transfering data from one view controller to another
+// if the user selects pdf as the book format, the pdf image will be displayed on the cell
+                if bookOrPdf.selectedSegmentIndex == 0{
+                    book.bookImage = UIImage(named : "book")
+                }else if bookOrPdf.selectedSegmentIndex == 1{
+                    book.bookImage = UIImage(named : "pdf2")
+            }
+            
+                //transfering data from one view controller to another
             
             let destination = segue.destination as! BookListViewController
             destination.userBooks.append(book)

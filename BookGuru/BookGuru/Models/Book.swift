@@ -16,5 +16,6 @@ class Book{
     var lastLineRead : Int? = nil
     var bookOrPdf : Bool?
     var modificationTime  = Date()
+    var bookImage : UIImage?
     
 }
