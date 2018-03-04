@@ -12,8 +12,8 @@ class Book{
     
     var bookName = ""
     var authorName = ""
-    var lastPageRead : Int = 0
-    var lastLinePage : Int?
+    var lastPageRead : Int? = nil
+    var lastLineRead : Int? = nil
     var bookOrPdf : Bool?
     var modificationTime  = Date()
     

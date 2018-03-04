@@ -33,6 +33,8 @@ class ShowBookViewController : UIViewController{
     @IBOutlet weak var bookOrPdf: UISegmentedControl!
     
     
+    // - MARK : VIEW CONTROLLER CYCLES METHODS
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -40,14 +42,14 @@ class ShowBookViewController : UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        
         bookNameTextField.text = ""
         authorTextField.text = ""
         lastPageReadTextField.text = ""
         lastLineReadTextField.text = ""
-        
     }
+    
+
+    // - MARK : SEGUES
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueIdentifier = segue.identifier else { return }
@@ -59,7 +61,8 @@ class ShowBookViewController : UIViewController{
             
             book.bookName = bookNameTextField.text ?? ""
             book.authorName = authorTextField.text ?? ""
-            book.lastPageRead = 
+            book.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter())!
+            book.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter())!
 
         case "cancel":
             print("cancel bar button item tapped")
@@ -68,4 +71,25 @@ class ShowBookViewController : UIViewController{
             print("unexpected segue identifier")
         }
     }
+    
+    // - MARK : KEYBOARD EVENTS
+    
+    
+    // This function dismiss keybpard when user tap on the background
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // This funnction dismiss the keyboard when the user clicks "retunr"
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        bookNameTextField.resignFirstResponder()
+        authorTextField.resignFirstResponder()
+        lastPageReadTextField.resignFirstResponder()
+        lastLineReadTextField.resignFirstResponder()
+        
+        return true
+    }
+    
+    
+    
 }
