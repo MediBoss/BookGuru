@@ -58,8 +58,8 @@ class ShowBookViewController : UIViewController{
             let book = Book()
             
             book.bookName = bookNameTextField.text ?? ""
-            book.authorName = bookNameTextField.text ?? ""
-            book.modificationTime = Date()
+            book.authorName = authorTextField.text ?? ""
+            book.lastPageRead = 
 
         case "cancel":
             print("cancel bar button item tapped")

@@ -14,6 +14,4 @@ class BookViewControllerCell : UITableViewCell{
     @IBOutlet weak var modificationTimeLabel: UILabel!
     @IBOutlet weak var bookImage: UIImageView!
     
-    
-    
 }
