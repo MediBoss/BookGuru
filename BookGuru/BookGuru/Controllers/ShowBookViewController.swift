@@ -33,6 +33,10 @@ class ShowBookViewController : UIViewController{
     @IBOutlet weak var bookOrPdf: UISegmentedControl!
     
     
+    // - MARK : PROPERTIES
+    
+    var book : Book?
+    
     // - MARK : VIEW CONTROLLER CYCLES METHODS
     
     override func viewDidLoad() {
@@ -52,10 +56,11 @@ class ShowBookViewController : UIViewController{
     // - MARK : SEGUES
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let segueIdentifier = segue.identifier else { return }
+      
+        guard let segueIdentifier = segue.identifier, let segueDestination = segue.destination as? BookListViewController else {return}
         
         switch segueIdentifier {
-        case "save":
+        case "save" where book != nil:
             
             let book = Book()
             

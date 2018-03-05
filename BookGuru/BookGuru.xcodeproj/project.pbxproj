@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673EF872204C93D300C56519 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673EF871204C93D300C56519 /* CoreDataHelper.swift */; };
 		6779DECE2046F01E000D9B9C /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */; };
 		6779DED22048C30F000D9B9C /* String+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779DED12048C30F000D9B9C /* String+Int.swift */; };
 		67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8822044E11600F0DF24 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		673EF871204C93D300C56519 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
 		6779DED12048C30F000D9B9C /* String+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Int.swift"; sourceTree = "<group>"; };
 		67C2A87F2044E11600F0DF24 /* BookGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		673EF870204C93AF00C56519 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				673EF871204C93D300C56519 /* CoreDataHelper.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		67C2A8762044E11600F0DF24 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		67C2A8812044E11600F0DF24 /* BookGuru */ = {
 			isa = PBXGroup;
 			children = (
+				673EF870204C93AF00C56519 /* CoreData */,
 				67C2A8AA204617C400F0DF24 /* Extensions */,
 				67C2A8A12044E1DD00F0DF24 /* Controllers */,
 				67C2A89F2044E1C900F0DF24 /* Views */,
@@ -189,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673EF872204C93D300C56519 /* CoreDataHelper.swift in Sources */,
 				67C2A8A32044E1F500F0DF24 /* BookListViewController.swift in Sources */,
 				67C2A8A52044E21100F0DF24 /* BookViewControllerCell.swift in Sources */,
 				67C2A8AC204617E300F0DF24 /* Date+String.swift in Sources */,
