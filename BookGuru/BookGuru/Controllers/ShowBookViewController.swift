@@ -37,7 +37,7 @@ class ShowBookViewController : UIViewController{
     
     var book : Book?
     
-    // - MARK : VIEW CONTROLLER CYCLES METHODS
+    // - MARK : VIEW CONTROLLER CYCLE METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +46,21 @@ class ShowBookViewController : UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        bookNameTextField.text = ""
-        authorTextField.text = ""
-        lastPageReadTextField.text = ""
-        lastLineReadTextField.text = ""
+        if let book = book{
+            bookNameTextField.text = book.bookName
+            authorTextField.text = book.authorName
+            lastPageReadTextField.text = 
+            lastLineReadTextField.text = book.lastLineRead
+            
+            
+        }else{
+            
+            bookNameTextField.text = ""
+            authorTextField.text = ""
+            lastPageReadTextField.text = ""
+            lastLineReadTextField.text = ""
+        }
+     
     }
     
 
@@ -62,28 +73,7 @@ class ShowBookViewController : UIViewController{
         switch segueIdentifier {
         case "save" where book != nil:
             
-            let book = Book()
-            
-                //Initializing each book property
-            book.bookName = bookNameTextField.text ?? ""
-            book.authorName = authorTextField.text ?? ""
-            book.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter())!
-            book.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter())!
-            book.modificationTime = Date()
-            
-// if the user selects pdf as the book format, the pdf image will be displayed on the cell
-                if bookOrPdf.selectedSegmentIndex == 0{
-                    book.bookImage = UIImage(named : "book")
-                }else if bookOrPdf.selectedSegmentIndex == 1{
-                    book.bookImage = UIImage(named : "pdf2")
-            }
-            
-                //transfering data from one view controller to another
-            
-            let destination = segue.destination as! BookListViewController
-            destination.userBooks.append(book)
-            
-           
+              
 
         case "cancel":
             print("cancel bar button item tapped")

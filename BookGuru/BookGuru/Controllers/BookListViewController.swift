@@ -28,7 +28,7 @@ class BookListViewController : UITableViewController{
         super.viewDidLoad()
     }
 
-    // - MAKR : Properties
+    // - MAKRK : Properties
     
     // Creates a dynamic array of type Bookt store each book's information
     var userBooks = [Book](){
@@ -62,8 +62,14 @@ class BookListViewController : UITableViewController{
         guard let identifier = segue.identifier else {return}
         
         switch identifier{
+            
             case "displayBook":
-                print("switching to Show Book VC")
+                guard let indextPath = tableView.indexPathForSelectedRow else {return}
+                let book = userBooks[indextPath.row]
+                let destination = segue.destination as! ShowBookViewController
+                destination.book = book
+            
+            
             case "addBook" :
                 print("creating new book")
             case "preferences":
@@ -73,7 +79,7 @@ class BookListViewController : UITableViewController{
         }
     }
 
-    
+
     // This Function handles the pop segue to avoid memory leaks by using an unwind segue
     @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
         //empty at the moment
