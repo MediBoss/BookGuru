@@ -46,15 +46,18 @@ class ShowBookViewController : UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // if the book cell clicked already has an insteance created
         if let book = book{
+            // the proper properties of the book instance are shown
+            
             bookNameTextField.text = book.bookName
             authorTextField.text = book.authorName
-            lastPageReadTextField.text = 
-            lastLineReadTextField.text = book.lastLineRead
+            lastPageReadTextField.text = book.lastPageRead?.intToStringConverter()
+            lastLineReadTextField.text = book.lastLineRead?.intToStringConverter()
             
-            
+            // if there are no instance created corresponding the clicked book cell
         }else{
-            
+                // The text field are empty
             bookNameTextField.text = ""
             authorTextField.text = ""
             lastPageReadTextField.text = ""
@@ -68,12 +71,32 @@ class ShowBookViewController : UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
-        guard let segueIdentifier = segue.identifier, let segueDestination = segue.destination as? BookListViewController else {return}
+        guard let segueIdentifier = segue.identifier,
+              let segueDestination = segue.destination as? BookListViewController else {return}
         
         switch segueIdentifier {
+            
         case "save" where book != nil:
             
-              
+        // The chain of statements below updates the book refernce with the new data after the "save" button is taped
+            
+                book?.bookName = bookNameTextField.text ?? ""
+                book?.authorName = authorTextField.text ?? ""
+                book?.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
+                book?.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
+            
+        // the line below reloads the home page with the updated data after "save" is taped
+                segueDestination.tableView.reloadData()
+        
+            // if the save button is taped when the text fields are empty
+        case "save" where book == nil:
+            
+            let book = Book()
+            book.authorName = authorTextField.text ?? ""
+            book.bookName = bookNameTextField.text ?? ""
+            book.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
+            book.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
+            book.modificationTime = Date()
 
         case "cancel":
             print("cancel bar button item tapped")

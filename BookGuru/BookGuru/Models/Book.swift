@@ -14,8 +14,16 @@ class Book{
     var authorName = ""
     var lastPageRead : Int? = nil
     var lastLineRead : Int? = nil
-    var bookOrPdf : Bool?
+    var bookOrPdf : UISegmentedControl?
     var modificationTime  = Date()
     var bookImage : UIImage?
+    
+    /// This function cheks if the user select the book type to be a book or pdf and updates the proper UIImage
+    func checkUiSegmentedPicked(){
+        
+        if bookOrPdf?.selectedSegmentIndex == 0{
+            
+        }
+    }
     
 }

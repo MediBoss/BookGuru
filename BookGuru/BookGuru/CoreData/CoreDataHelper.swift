@@ -8,7 +8,7 @@
 
 import CoreData
 import UIKit
-
+/*
 struct CoreDataHelper{
 
     
@@ -37,3 +37,4 @@ struct CoreDataHelper{
     }
  
 }
+*/
