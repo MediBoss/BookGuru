@@ -12,17 +12,24 @@ class Book{
     
     var bookName = ""
     var authorName = ""
-    var lastPageRead : Int? = nil
-    var lastLineRead : Int? = nil
-    var bookOrPdf : UISegmentedControl?
+    var lastPageRead: Int? = nil
+    var lastLineRead: Int? = nil
+    var bookOrPdf: UISegmentedControl?
     var modificationTime  = Date()
-    var bookImage : UIImage?
+    var bookImage: UIImage?
     
     /// This function cheks if the user select the book type to be a book or pdf and updates the proper UIImage
-    func checkUiSegmentedPicked(){
+    func checkUiSegmentedPicked(segmentedControlArgument: UISegmentedControl?
+                               ,bookImageArgument: UIImage?){
         
-        if bookOrPdf?.selectedSegmentIndex == 0{
-            
+        guard var chooseBookOrPdf = segmentedControlArgument,
+              var bookImageSelected = bookImageArgument
+                        else {return}
+        
+        if chooseBookOrPdf.selectedSegmentIndex == 0{
+            bookImageSelected = UIImage(named: "book")!
+        }else if chooseBookOrPdf.selectedSegmentIndex == 1{
+            bookImageSelected = UIImage(named: "pdf4")!
         }
     }
     

@@ -84,7 +84,7 @@ class ShowBookViewController : UIViewController{
                 book?.authorName = authorTextField.text ?? ""
                 book?.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
                 book?.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
-            
+                book?.checkUiSegmentedPicked(segmentedControlArgument: bookOrPdf, bookImageArgument: book?.bookImage)
         // the line below reloads the home page with the updated data after "save" is taped
                 segueDestination.tableView.reloadData()
         
@@ -97,7 +97,10 @@ class ShowBookViewController : UIViewController{
             book.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
             book.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
             book.modificationTime = Date()
-
+            book.checkUiSegmentedPicked(segmentedControlArgument: bookOrPdf, bookImageArgument: book.bookImage)
+            
+            segueDestination.userBooks.append(book)
+            
         case "cancel":
             print("cancel bar button item tapped")
             
