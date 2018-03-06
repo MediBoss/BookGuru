@@ -40,11 +40,13 @@ class BookListViewController : UITableViewController{
     
     // - MARK : UITableView Data Source Methods
     
+    // This function returns the number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
     return userBooks.count
     }
     
+    // This Function populates the each cell accordingly
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookViewControllerCell", for: indexPath) as! BookViewControllerCell
@@ -54,7 +56,19 @@ class BookListViewController : UITableViewController{
         cell.bookImage.image = book.bookImage
         return cell
     }
-    
+
+    /*
+    // This function removes the book from the tableview if selected
+    override func tableView(_ tableview : UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete{
+            // remove from the array
+            let book = userBooks[indexPath.row]
+            //call the coredata helper method to remove the book
+        }
+    }
+ 
+ */
     // - MARK : SEGUES
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
