@@ -84,8 +84,10 @@ class ShowBookViewController : UIViewController{
                 book?.authorName = authorTextField.text ?? ""
                 book?.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
                 book?.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
-                book?.checkUiSegmentedPicked(segmentedControlArgument: bookOrPdf, bookImageArgument: book?.bookImage)
-        // the line below reloads the home page with the updated data after "save" is taped
+                book?.modificationTime = Date()
+                book?.checkUiSegmentedPicked(bookOrPdf)
+                
+        
                 segueDestination.tableView.reloadData()
         
             // if the save button is taped when the text fields are empty
@@ -97,7 +99,7 @@ class ShowBookViewController : UIViewController{
             book.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
             book.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
             book.modificationTime = Date()
-            book.checkUiSegmentedPicked(segmentedControlArgument: bookOrPdf, bookImageArgument: book.bookImage)
+            book.checkUiSegmentedPicked(bookOrPdf)
             
             segueDestination.userBooks.append(book)
             

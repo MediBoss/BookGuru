@@ -19,17 +19,11 @@ class Book{
     var bookImage: UIImage?
     
     /// This function cheks if the user select the book type to be a book or pdf and updates the proper UIImage
-    func checkUiSegmentedPicked(segmentedControlArgument: UISegmentedControl?
-                               ,bookImageArgument: UIImage?){
-        
-        guard var chooseBookOrPdf = segmentedControlArgument,
-              var bookImageSelected = bookImageArgument
-                        else {return}
-        
-        if chooseBookOrPdf.selectedSegmentIndex == 0{
-            bookImageSelected = UIImage(named: "book")!
-        }else if chooseBookOrPdf.selectedSegmentIndex == 1{
-            bookImageSelected = UIImage(named: "pdf4")!
+    func checkUiSegmentedPicked(_ segmentedControlArgument: UISegmentedControl){
+        if segmentedControlArgument.selectedSegmentIndex == 0{
+            bookImage = UIImage(named: "book")
+        }else{
+            bookImage = UIImage(named: "pdf2")
         }
     }
     
