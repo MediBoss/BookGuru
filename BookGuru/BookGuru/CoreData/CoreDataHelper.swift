@@ -25,8 +25,6 @@ struct CoreDataHelper{
         return context
     }()
     
-    
-    
     // - MARK : METHODS
 
     //Function to create a book reference
@@ -46,8 +44,13 @@ struct CoreDataHelper{
     }
     
     // Function to delete a book reference from the array
-    static func delete(){
-        
+    static func delete(_ bookToDelete : Book){
+        do{
+            objectContext.delete(bookToDelete)
+            try objectContext.save()
+        }catch let error{
+            print("Could not save \(error.localizedDescription)")
+        }
     }
     
     // Function to fetch and retrieve the user's book references
