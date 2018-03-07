@@ -45,16 +45,12 @@ struct CoreDataHelper{
     
     // Function to delete a book reference from the array
     static func delete(_ bookToDelete : Book){
-        do{
-            objectContext.delete(bookToDelete)
-            try objectContext.save()
-        }catch let error{
-            print("Could not save \(error.localizedDescription)")
-        }
+        objectContext.delete(bookToDelete)
+        saveBook()
     }
     
     // Function to fetch and retrieve the user's book references
-    static func retriveBooks() -> [Book]{
+    static func retrieveBooks() -> [Book]{
         
         do{
         
@@ -71,3 +67,4 @@ struct CoreDataHelper{
     }
  
 }
+

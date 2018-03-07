@@ -24,10 +24,6 @@ import CoreData
 
 class BookListViewController : UITableViewController{
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        CoreDataHelper.retriveBooks()
-    }
 
     // - MAKRK : Properties
     
@@ -36,6 +32,12 @@ class BookListViewController : UITableViewController{
         didSet {
             tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // This statements will populates the homepage with the user's books created
+        userBooks = CoreDataHelper.retrieveBooks()
     }
     
     
@@ -63,9 +65,9 @@ class BookListViewController : UITableViewController{
     override func tableView(_ tableview : UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
-            // remove from the array
-            let book = userBooks[indexPath.row]
-            //call the coredata helper method to remove the book
+            let bookToBeDeleted = userBooks[indexPath.row]
+            CoreDataHelper.delete(bookToBeDeleted)
+            userBooks = CoreDataHelper.retrieveBooks()
         }
     }
  
@@ -96,7 +98,8 @@ class BookListViewController : UITableViewController{
 
     // This Function handles the pop segue to avoid memory leaks by using an unwind segue
     @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
-        //empty at the moment
+        
+        userBooks = CoreDataHelper.retrieveBooks()
     }
     
     

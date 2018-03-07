@@ -41,6 +41,7 @@ class ShowBookViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = book?.bookName
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,52 +73,43 @@ class ShowBookViewController : UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
         // Safely unwrapping @IBOULETS optionals
-        guard let segueIdentifier = segue.identifier,
-              let segueDestination = segue.destination as? BookListViewController,
-              let bookAuthor = authorTextField.text,
-              let bookName = bookNameTextField.text,
-              let lastLineRead = lastLineReadTextField.text?.stringToIntConverter(),
-              let lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
-                    else {return}
-        
+        guard let segueIdentifier = segue.identifier else {return}
         switch segueIdentifier {
             
         case "save" where book != nil:
             
-       
-            
-                book?.bookName = bookName
-                book?.authorName = bookAuthor
-                book?.lastPageRead = lastPageRead
-                book?.lastLineRead = lastLineRead
+                book?.bookName = bookNameTextField.text ?? ""
+                book?.authorName = authorTextField.text ?? ""
+                book?.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter(lastPageReadTextField.text))!
+                book?.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter(lastLineReadTextField.text))!
                 book?.modificationTime = Date()
-                
+            
                 if bookOrPdf.selectedSegmentIndex == 0{
                     book?.bookImage = UIImage(named: "book")
                 }else{
                     book?.bookImage = UIImage(named: "pdf2")
                 }
+ 
                 CoreDataHelper.saveBook()
-                segueDestination.tableView.reloadData()
         
             // if the save button is taped when the text fields are empty
         case "save" where book == nil:
             
-            let book = Book()
-            book.authorName = bookAuthor
-            book.bookName = bookName
-            book.lastPageRead = lastPageRead
-            book.lastLineRead = lastLineRead
+            let book = CoreDataHelper.createBook()
+            book.authorName = authorTextField.text ?? ""
+            book.bookName = bookNameTextField.text ?? ""
+            book.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter(lastPageReadTextField.text))!
+            book.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter(lastLineReadTextField.text))!
             book.modificationTime = Date()
             
+        
             if bookOrPdf.selectedSegmentIndex == 0{
                 book.bookImage = UIImage(named: "book")
             }else{
                 book.bookImage = UIImage(named: "pdf2")
             }
-            
+ 
             CoreDataHelper.saveBook()
-            segueDestination.userBooks.append(book)
             
         case "cancel":
             print("cancel bar button item tapped")
