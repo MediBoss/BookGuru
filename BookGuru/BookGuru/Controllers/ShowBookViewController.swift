@@ -5,7 +5,7 @@
 //  Created by Assumani, Medi on 2/27/18.
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import CoreData
 
@@ -52,8 +52,8 @@ class ShowBookViewController : UIViewController{
             
             bookNameTextField.text = book.bookName
             authorTextField.text = book.authorName
-            lastPageReadTextField.text = book.lastPageRead?.intToStringConverter()
-            lastLineReadTextField.text = book.lastLineRead?.intToStringConverter()
+            lastPageReadTextField.text = book.lastPageRead.intToStringConverter()
+            lastLineReadTextField.text = book.lastLineRead.intToStringConverter()
             
             // if there are no instance created corresponding the clicked book cell
         }else{
@@ -71,36 +71,52 @@ class ShowBookViewController : UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
+        // Safely unwrapping @IBOULETS optionals
         guard let segueIdentifier = segue.identifier,
-              let segueDestination = segue.destination as? BookListViewController else {return}
+              let segueDestination = segue.destination as? BookListViewController,
+              let bookAuthor = authorTextField.text,
+              let bookName = bookNameTextField.text,
+              let lastLineRead = lastLineReadTextField.text?.stringToIntConverter(),
+              let lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
+                    else {return}
         
         switch segueIdentifier {
             
         case "save" where book != nil:
             
-        // The chain of statements below updates the book refernce with the new data after the "save" button is taped
+       
             
-                book?.bookName = bookNameTextField.text ?? ""
-                book?.authorName = authorTextField.text ?? ""
-                book?.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
-                book?.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
+                book?.bookName = bookName
+                book?.authorName = bookAuthor
+                book?.lastPageRead = lastPageRead
+                book?.lastLineRead = lastLineRead
                 book?.modificationTime = Date()
-                book?.checkUiSegmentedPicked(bookOrPdf)
                 
-        
+                if bookOrPdf.selectedSegmentIndex == 0{
+                    book?.bookImage = UIImage(named: "book")
+                }else{
+                    book?.bookImage = UIImage(named: "pdf2")
+                }
+                CoreDataHelper.saveBook()
                 segueDestination.tableView.reloadData()
         
             // if the save button is taped when the text fields are empty
         case "save" where book == nil:
             
             let book = Book()
-            book.authorName = authorTextField.text ?? ""
-            book.bookName = bookNameTextField.text ?? ""
-            book.lastPageRead = lastPageReadTextField.text?.stringToIntConverter()
-            book.lastLineRead = lastLineReadTextField.text?.stringToIntConverter()
+            book.authorName = bookAuthor
+            book.bookName = bookName
+            book.lastPageRead = lastPageRead
+            book.lastLineRead = lastLineRead
             book.modificationTime = Date()
-            book.checkUiSegmentedPicked(bookOrPdf)
             
+            if bookOrPdf.selectedSegmentIndex == 0{
+                book.bookImage = UIImage(named: "book")
+            }else{
+                book.bookImage = UIImage(named: "pdf2")
+            }
+            
+            CoreDataHelper.saveBook()
             segueDestination.userBooks.append(book)
             
         case "cancel":

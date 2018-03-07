@@ -26,6 +26,7 @@ class BookListViewController : UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        CoreDataHelper.retriveBooks()
     }
 
     // - MAKRK : Properties
@@ -52,12 +53,12 @@ class BookListViewController : UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookViewControllerCell", for: indexPath) as! BookViewControllerCell
         let book = userBooks[indexPath.row]
         cell.bookName.text = book.bookName
-        cell.modificationTimeLabel.text = book.modificationTime.dateToStringConversion()
-        cell.bookImage.image = book.bookImage
+        cell.modificationTimeLabel.text = book.modificationTime?.dateToStringConversion()
+        cell.bookImage.image = book.bookImage as? UIImage
         return cell
     }
 
-    /*
+
     // This function removes the book from the tableview if selected
     override func tableView(_ tableview : UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -68,7 +69,6 @@ class BookListViewController : UITableViewController{
         }
     }
  
- */
     // - MARK : SEGUES
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

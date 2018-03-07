@@ -15,17 +15,17 @@ import Foundation
  when storing that value into an int class variable
  */
 extension String{
-    func stringToIntConverter() -> Int{
-        return (Int(self))!
+    func stringToIntConverter() -> Int16{
+        return (Int16(self))!
     }
 }
 
 /*
- Extending the Int type with he intToStringConverter
+ Extending the Int16 type with he intToStringConverter
  to convert an int to a string when filling up a
  UILabel.text
  */
-extension Int{
+extension Int16{
     func intToStringConverter() -> String{
         return (String(self))
     }
