@@ -42,6 +42,10 @@ class ShowBookViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = book?.bookName
+        self.bookNameTextField.delegate = self as? UITextFieldDelegate
+        self.authorTextField.delegate = self as? UITextFieldDelegate
+        self.lastPageReadTextField.delegate = self as? UITextFieldDelegate
+        self.lastLineReadTextField.delegate = self as? UITextFieldDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,6 +131,7 @@ class ShowBookViewController : UIViewController{
         self.view.endEditing(true)
     }
     
+    /*
     // This funnction dismiss the keyboard when the user clicks "retunr"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         bookNameTextField.resignFirstResponder()
@@ -136,4 +141,5 @@ class ShowBookViewController : UIViewController{
         
         return true
     }
+ */
 }
