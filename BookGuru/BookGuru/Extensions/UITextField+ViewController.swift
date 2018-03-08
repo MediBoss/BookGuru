@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 
+/*
+    Extending the ShowBookViewController to add special functionality
+    to the keyboard. When the user taps "return" key, the cursor goes
+    to the text field below.
+ 
+ Special Thanks to : Bart Jacobs from cocoacasts.com
+ */
+
 extension ShowBookViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         

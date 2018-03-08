@@ -42,10 +42,10 @@ class ShowBookViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = book?.bookName
-        self.bookNameTextField.delegate = self as? UITextFieldDelegate
-        self.authorTextField.delegate = self as? UITextFieldDelegate
-        self.lastPageReadTextField.delegate = self as? UITextFieldDelegate
-        self.lastLineReadTextField.delegate = self as? UITextFieldDelegate
+        self.bookNameTextField.delegate = self as UITextFieldDelegate
+        self.authorTextField.delegate = self as UITextFieldDelegate
+        self.lastPageReadTextField.delegate = self as UITextFieldDelegate
+        self.lastLineReadTextField.delegate = self as UITextFieldDelegate
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,10 +68,8 @@ class ShowBookViewController : UIViewController{
             lastPageReadTextField.text = ""
             lastLineReadTextField.text = ""
         }
-     
     }
     
-
     // - MARK : SEGUES
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -109,8 +107,10 @@ class ShowBookViewController : UIViewController{
         
             if bookOrPdf.selectedSegmentIndex == 0{
                 book.bookImage = UIImage(named: "book")
+
             }else{
                 book.bookImage = UIImage(named: "pdf2")
+
             }
  
             CoreDataHelper.saveBook()
@@ -131,15 +131,4 @@ class ShowBookViewController : UIViewController{
         self.view.endEditing(true)
     }
     
-    /*
-    // This funnction dismiss the keyboard when the user clicks "retunr"
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-        bookNameTextField.resignFirstResponder()
-        authorTextField.resignFirstResponder()
-        lastPageReadTextField.resignFirstResponder()
-        lastLineReadTextField.resignFirstResponder()
-        
-        return true
-    }
- */
 }
