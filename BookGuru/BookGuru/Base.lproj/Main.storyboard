@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TrebuchetMS.ttf">
+            <string>TrebuchetMS</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--My Books-->
         <scene sceneID="h2t-L7-wCh">
@@ -19,28 +24,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookViewControllerCell" rowHeight="44" id="ul0-OD-Eqc" customClass="BookViewControllerCell" customModule="BookGuru" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookViewControllerCell" rowHeight="60" id="ul0-OD-Eqc" customClass="BookViewControllerCell" customModule="BookGuru" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ul0-OD-Eqc" id="bUw-3p-aee">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4" userLabel="mainCellStackView">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.666666666666664"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-bS-ex4" userLabel="mainCellStackView">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="59.666666666666664"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mT2-z3-vVf" userLabel="labelsStackView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="59.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHN-6E-lTi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="22"/>
-                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Get-CZ-ZGR">
-                                                            <rect key="frame" x="0.0" y="22" width="172.66666666666666" height="21.666666666666671"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <rect key="frame" x="0.0" y="30" width="345" height="29.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -49,9 +54,6 @@
                                                         <constraint firstItem="Get-CZ-ZGR" firstAttribute="height" secondItem="ZHN-6E-lTi" secondAttribute="height" id="cC8-ut-yCl"/>
                                                     </constraints>
                                                 </stackView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-I3-4qB">
-                                                    <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="43.666666666666664"/>
-                                                </imageView>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -62,8 +64,8 @@
                                         <constraint firstItem="j6J-bS-ex4" firstAttribute="top" secondItem="bUw-3p-aee" secondAttribute="top" id="dlF-nm-NSy"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="bookImage" destination="8UA-I3-4qB" id="HFC-rF-y4K"/>
                                     <outlet property="bookName" destination="ZHN-6E-lTi" id="JVY-uZ-qVq"/>
                                     <outlet property="modificationTimeLabel" destination="Get-CZ-ZGR" id="f7i-py-oJm"/>
                                     <segue destination="ucd-rX-Ain" kind="show" identifier="displayBook" id="0Ho-cg-3GI"/>
@@ -76,11 +78,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Books" id="jMv-Bq-cdG">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="UzA-29-sns">
-                            <connections>
-                                <segue destination="W5a-GP-PJc" kind="show" identifier="preferences" id="zMj-Ud-3De"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m03-FU-pPU">
                             <connections>
                                 <segue destination="ucd-rX-Ain" kind="show" identifier="addBook" id="PM9-sc-xfh"/>
@@ -105,34 +102,41 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-by-UaX" userLabel="bookName">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="98"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-a7-Qwp" userLabel="auhtorName">
                                         <rect key="frame" x="0.0" y="98" width="275" height="98"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Page Read" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yiD-jg-HVX" userLabel="lastPageRead">
                                         <rect key="frame" x="0.0" y="196" width="275" height="98"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Line Read" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ns-ZY-NBK" userLabel="lastLineRead">
                                         <rect key="frame" x="0.0" y="294" width="275" height="98"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-ge-m5M">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uNK-ge-m5M">
                                         <rect key="frame" x="0.0" y="392" width="275" height="99"/>
                                         <segments>
                                             <segment title="Book"/>
                                             <segment title="PDF"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="bookOrPdfIndexChanged:" destination="ucd-rX-Ain" eventType="valueChanged" id="l9T-Fg-7KY"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -143,7 +147,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="naF-AB-8La" firstAttribute="trailing" secondItem="hka-Q2-BH5" secondAttribute="trailing" constant="50" id="2Zt-PC-adn"/>
                             <constraint firstItem="hka-Q2-BH5" firstAttribute="top" secondItem="naF-AB-8La" secondAttribute="top" constant="100" id="6hG-2W-Sbo"/>
@@ -176,21 +180,6 @@
                 <exit id="kqE-VU-lnN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1863" y="13"/>
-        </scene>
-        <!--Usere Preferences View Controller-->
-        <scene sceneID="tV2-4R-pLq">
-            <objects>
-                <viewController id="W5a-GP-PJc" customClass="UserePreferencesViewController" customModule="BookGuru" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QDK-kd-gXb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Hxv-kK-bUH"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PzZ-Mc-xYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-370" y="13"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cnW-1C-NXI">

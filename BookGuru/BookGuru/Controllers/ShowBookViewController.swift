@@ -7,7 +7,6 @@
 //
 import Foundation
 import UIKit
-import CoreData
 
 /*
             ShowBookViewController
@@ -33,9 +32,32 @@ class ShowBookViewController : UIViewController{
     @IBOutlet weak var bookOrPdf: UISegmentedControl!
     
     
+    
+    @IBAction func bookOrPdfIndexChanged(_ sender: Any) {
+        let bookPreference = UserDefaults.standard
+        let segmentControl: UISegmentedControl = sender as! UISegmentedControl
+            
+        switch segmentControl.selectedSegmentIndex{
+            case 0:
+                bookOrPdf.selectedSegmentIndex = 0
+                bookPreference.set(true,forKey: "bookIsSelected")
+                bookPreference.synchronize()
+            case 1:
+                bookOrPdf.selectedSegmentIndex = 1
+                bookPreference.set(false, forKey: "bookIsSelected")
+                bookPreference.synchronize()
+            
+            default:
+                print("Invalid Segment Control Index")
+        }
+        
+    }
+    
+    
     // - MARK : PROPERTIES
     
     var book : Book?
+    
     
     // - MARK : VIEW CONTROLLER CYCLE METHODS
     
@@ -56,9 +78,10 @@ class ShowBookViewController : UIViewController{
             // the proper properties of the book instance are shown
             
             bookNameTextField.text = book.bookName
-            authorTextField.text = book.authorName
-            lastPageReadTextField.text = book.lastPageRead.intToStringConverter()
-            lastLineReadTextField.text = book.lastLineRead.intToStringConverter()
+            authorTextField.text = book.authorName!
+            lastPageReadTextField.text = book.lastPageRead.intToStringConverter()!
+            lastLineReadTextField.text = book.lastLineRead.intToStringConverter()!
+            book.bookOrPdf = bookOrPdf
             
             // if there are no instance created corresponding the clicked book cell
         }else{
@@ -74,7 +97,6 @@ class ShowBookViewController : UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
-        // Safely unwrapping @IBOULETS optionals
         guard let segueIdentifier = segue.identifier else {return}
         switch segueIdentifier {
             
@@ -85,12 +107,7 @@ class ShowBookViewController : UIViewController{
                 book?.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter(lastPageReadTextField.text))!
                 book?.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter(lastLineReadTextField.text))!
                 book?.modificationTime = Date()
-            
-                if bookOrPdf.selectedSegmentIndex == 0{
-                    book?.bookImage = UIImage(named: "book")
-                }else{
-                    book?.bookImage = UIImage(named: "pdf2")
-                }
+                book?.bookOrPdf = bookOrPdf
  
                 CoreDataHelper.saveBook()
         
@@ -98,21 +115,14 @@ class ShowBookViewController : UIViewController{
         case "save" where book == nil:
             
             let book = CoreDataHelper.createBook()
-            book.authorName = authorTextField.text ?? ""
-            book.bookName = bookNameTextField.text ?? ""
+            book.authorName = authorTextField.text
+            book.bookName = bookNameTextField.text
+            // setting a default value to state that the user hasn't started reading the book
             book.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter(lastPageReadTextField.text))!
             book.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter(lastLineReadTextField.text))!
             book.modificationTime = Date()
+            book.bookOrPdf = bookOrPdf
             
-        
-            if bookOrPdf.selectedSegmentIndex == 0{
-                book.bookImage = UIImage(named: "book")
-
-            }else{
-                book.bookImage = UIImage(named: "pdf2")
-
-            }
- 
             CoreDataHelper.saveBook()
             
         case "cancel":

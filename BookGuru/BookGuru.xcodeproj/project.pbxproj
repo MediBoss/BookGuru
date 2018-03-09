@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		673EF872204C93D300C56519 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673EF871204C93D300C56519 /* CoreDataHelper.swift */; };
 		6763382F2050B6E80086C511 /* UITextField+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6763382E2050B6E80086C511 /* UITextField+ViewController.swift */; };
-		676338312050BB320086C511 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676338302050BB320086C511 /* BookView.swift */; };
-		6779DECE2046F01E000D9B9C /* UserPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */; };
 		6779DED22048C30F000D9B9C /* String+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6779DED12048C30F000D9B9C /* String+Int.swift */; };
 		67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C2A8822044E11600F0DF24 /* AppDelegate.swift */; };
 		67C2A8882044E11600F0DF24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C2A8862044E11600F0DF24 /* Main.storyboard */; };
@@ -26,8 +24,6 @@
 /* Begin PBXFileReference section */
 		673EF871204C93D300C56519 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		6763382E2050B6E80086C511 /* UITextField+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+ViewController.swift"; sourceTree = "<group>"; };
-		676338302050BB320086C511 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
-		6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesViewController.swift; sourceTree = "<group>"; };
 		6779DED12048C30F000D9B9C /* String+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Int.swift"; sourceTree = "<group>"; };
 		67C2A87F2044E11600F0DF24 /* BookGuru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookGuru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C2A8822044E11600F0DF24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				67C2A8A42044E21100F0DF24 /* BookViewControllerCell.swift */,
-				676338302050BB320086C511 /* BookView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,7 +103,6 @@
 			children = (
 				67C2A8A22044E1F500F0DF24 /* BookListViewController.swift */,
 				67C2A8AD20461E8A00F0DF24 /* ShowBookViewController.swift */,
-				6779DECD2046F01E000D9B9C /* UserPreferencesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,8 +197,6 @@
 				6779DED22048C30F000D9B9C /* String+Int.swift in Sources */,
 				67C2A8832044E11600F0DF24 /* AppDelegate.swift in Sources */,
 				67C2A8AE20461E8A00F0DF24 /* ShowBookViewController.swift in Sources */,
-				6779DECE2046F01E000D9B9C /* UserPreferencesViewController.swift in Sources */,
-				676338312050BB320086C511 /* BookView.swift in Sources */,
 				67C2A88B2044E11600F0DF24 /* BookGuru.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

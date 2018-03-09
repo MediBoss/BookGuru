@@ -20,26 +20,26 @@
 
 
 import UIKit
-import CoreData
 
 class BookListViewController : UITableViewController{
-    
+
 
     // - MAKRK : Properties
     
-    // Creates a dynamic array of type Bookt store each book's information
+    // Creates a dynamic array of type Book store each book's information
     var userBooks = [Book](){
         didSet {
+            // if a book is added or removed, the tableview updates
             tableView.reloadData()
         }
     }
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // This statements will populates the homepage with the user's books created
         userBooks = CoreDataHelper.retrieveBooks()
     }
-    
     
     // - MARK : UITableView Data Source Methods
     
@@ -56,7 +56,6 @@ class BookListViewController : UITableViewController{
         let book = userBooks[indexPath.row]
         cell.bookName.text = book.bookName
         cell.modificationTimeLabel.text = book.modificationTime?.dateToStringConversion()
-        cell.bookImage.image = book.bookImage as? UIImage
         return cell
     }
 
@@ -85,11 +84,8 @@ class BookListViewController : UITableViewController{
                 let destination = segue.destination as! ShowBookViewController
                 destination.book = book
             
-            
             case "addBook" :
                 print("creating new book")
-            case "preferences":
-                print("switching to show Preferences VC")
             default :
                 print("Unexpected Segue Identifier")
         }
@@ -98,9 +94,6 @@ class BookListViewController : UITableViewController{
 
     // This Function handles the pop segue to avoid memory leaks by using an unwind segue
     @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
-        
-        userBooks = CoreDataHelper.retrieveBooks()
+            userBooks = CoreDataHelper.retrieveBooks()
     }
-    
-    
 }

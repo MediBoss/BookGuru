@@ -6,16 +6,12 @@
 //  Copyright © 2018 Assumani, Medi. All rights reserved.
 //
 
-import Foundation
 import CoreData
 import UIKit
 
 struct CoreDataHelper{
-    
     static let objectContext: NSManagedObjectContext = {
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            
             fatalError()
         }
                 //Accesing the NSPersistentContainer from the CoreData Stack located in the AppDelegate.swift
@@ -53,17 +49,15 @@ struct CoreDataHelper{
     static func retrieveBooks() -> [Book]{
         
         do{
+            // this statement will return every Book objects
+            let fetchRequest = NSFetchRequest<Book>(entityName: "Book")
+            let fetchResults = try objectContext.fetch(fetchRequest)
         
-        let fetchRequest = NSFetchRequest<Book>(entityName: "Book")
-        let fetchResults = try objectContext.fetch(fetchRequest)
-        
-        return fetchResults
-            
+            return fetchResults
         }catch let errorFound{
             print("Could not Fetch \(errorFound.localizedDescription)")
+            return []
         }
-        
-        return []
     }
  
 }
