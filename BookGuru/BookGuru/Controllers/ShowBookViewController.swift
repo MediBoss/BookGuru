@@ -23,7 +23,7 @@ import UIKit
 
 class ShowBookViewController : UIViewController{
    
-    // - MARK : IBOULETS
+    // - MARK : @IBOULETS
     
     @IBOutlet weak var bookNameTextField: UITextField!
     @IBOutlet weak var authorTextField: UITextField!
@@ -31,7 +31,8 @@ class ShowBookViewController : UIViewController{
     @IBOutlet weak var lastLineReadTextField: UITextField!
     @IBOutlet weak var bookOrPdf: UISegmentedControl!
     
-    
+   
+    // - MARK : @IBACTIONS
     
     @IBAction func bookOrPdfIndexChanged(_ sender: Any) {
         let bookPreference = UserDefaults.standard
@@ -52,6 +53,7 @@ class ShowBookViewController : UIViewController{
         }
         
     }
+
     
     
     // - MARK : PROPERTIES
@@ -63,11 +65,29 @@ class ShowBookViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // - MARK : TEXTFIELDS DELEGATES
         self.title = book?.bookName
         self.bookNameTextField.delegate = self as UITextFieldDelegate
         self.authorTextField.delegate = self as UITextFieldDelegate
         self.lastPageReadTextField.delegate = self as UITextFieldDelegate
         self.lastLineReadTextField.delegate = self as UITextFieldDelegate
+        
+        // - MARK : USERDEFAULTS PERSISTANCE
+        
+        let bookTypePrefernce = UserDefaults.standard
+        if let isBookSelected: Bool = bookTypePrefernce.value(forKey: "bookIsSelected") as! Bool? {
+            if isBookSelected{
+                self.bookOrPdf.selectedSegmentIndex = 0
+            }else{
+                self.bookOrPdf.selectedSegmentIndex = 1
+            }
+        }else{
+            self.bookOrPdf.selectedSegmentIndex = 1
+            bookTypePrefernce.set(false, forKey: "bookIsSelected")
+            bookTypePrefernce.synchronize()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -107,8 +127,6 @@ class ShowBookViewController : UIViewController{
                 book?.lastPageRead = (lastPageReadTextField.text?.stringToIntConverter(lastPageReadTextField.text))!
                 book?.lastLineRead = (lastLineReadTextField.text?.stringToIntConverter(lastLineReadTextField.text))!
                 book?.modificationTime = Date()
-                book?.bookOrPdf = bookOrPdf
- 
                 CoreDataHelper.saveBook()
         
             // if the save button is taped when the text fields are empty
