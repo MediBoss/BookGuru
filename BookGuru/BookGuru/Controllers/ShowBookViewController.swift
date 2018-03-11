@@ -35,18 +35,19 @@ class ShowBookViewController : UIViewController{
     // - MARK : @IBACTIONS
     
     @IBAction func bookOrPdfIndexChanged(_ sender: Any) {
-        let bookPreference = UserDefaults.standard
-        let segmentControl: UISegmentedControl = sender as! UISegmentedControl
+        let bookTypePreference = UserDefaults.standard
+        let chooSingBookOrPdf: UISegmentedControl = sender as! UISegmentedControl
             
-        switch segmentControl.selectedSegmentIndex{
+        switch chooSingBookOrPdf.selectedSegmentIndex{
             case 0:
                 bookOrPdf.selectedSegmentIndex = 0
-                bookPreference.set(true,forKey: "bookIsSelected")
-                bookPreference.synchronize()
+                bookTypePreference.set(true,forKey: "bookIsSelected")
+                bookTypePreference.synchronize()
+            
             case 1:
                 bookOrPdf.selectedSegmentIndex = 1
-                bookPreference.set(false, forKey: "bookIsSelected")
-                bookPreference.synchronize()
+                bookTypePreference.set(false, forKey: "bookIsSelected")
+                bookTypePreference.synchronize()
             
             default:
                 print("Invalid Segment Control Index")
@@ -115,6 +116,12 @@ class ShowBookViewController : UIViewController{
     
     // - MARK : SEGUES
     
+    /*
+    This method sets the view of book preferences and initializes the attributes of the book object
+     
+     - Parameter : segue : The segue to the destination view controller
+ 
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
       
         guard let segueIdentifier = segue.identifier else {return}
