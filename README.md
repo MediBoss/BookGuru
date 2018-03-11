@@ -21,10 +21,10 @@ Students, as well as literacy enthusiast tend to read many books simutaneously, 
 * <b>App crashes when anything besides integer is typed in the "last page read" and "last line read" text fields</b>
 * Keyboard overlaps with text fileds
 ## </br> Screeshots
-<img src= "images/im5.png" width = 250 height = 300>
-<img src= "images/im2.jpeg" width = 250 height = 300>
+<img src= "images/im5.png" width = 250 height = 400>
+<img src= "images/im2.jpeg" width = 250 height = 400>
 <img src= "images/im1.PNG" width = 250 height = 400>
-<img src= "images/im3.PNG" width = 250 height = 300>
-<img src= "images/im4.PNG" width = 250 height = 300>
+<img src= "images/im3.PNG" width = 250 height = 400>
+<img src= "images/im4.PNG" width = 250 height = 400>
 
 
