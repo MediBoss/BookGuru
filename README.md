@@ -12,6 +12,9 @@ Students, as well as literacy enthusiast tend to read many books simutaneously, 
 * Editing the book reference when needed
 * Deleting the book reference
 ## </br> Implementations
+* UITableViewController to have a scrollable menu of book references
+* CoreData Framework to persist each of the user's book reference
+* UseDefaults to persist the UISegmenControl after pressing "save"
 ## </br> Bugs To Fix
 * <strike>App crashes when editing book data</strike>
 * <strike>App crashes when "save" button pressed after leaving the text fields empty</strike>
