@@ -23,7 +23,7 @@ Students, as well as literacy enthusiast tend to read many books simutaneously, 
 ## </br> Screeshots
 <img src= "images/im5.png" width = 200 height = 150>
 <img src= "images/im1.PNG" width = 200 height = 150>
-<img src= "images/im2.PNG" width = 200 height = 150>
+<img src= "images/im2.jpg" width = 200 height = 150>
 <img src= "images/im3.PNG" width = 200 height = 150>
 <img src= "images/im4.PNG" width = 200 height = 150>
 
