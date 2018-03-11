@@ -15,5 +15,5 @@ Students, as well as literacy enthusiast tend to read many books simutaneously, 
 ## </br> Bugs To Fix
 * <strike>App crashes when editing book data</strike>
 * <strike>App crashes when "save" button pressed after leaving the text fields empty</strike>
-* <bold>App crashes when anything besides integer is typed in the "last page read" and "last line read" text fields</bold>
+* <b>App crashes when anything besides integer is typed in the "last page read" and "last line read" text fields</b>
 ## </br> Screeshots
