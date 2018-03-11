@@ -24,6 +24,6 @@ Students, as well as literacy enthusiast tend to read many books simutaneously, 
 <img src= "images/im5.png" width = 250 height = 500>
 <img src= "images/im2.jpeg" width = 250 height = 500>
 <img src= "images/im1.PNG" width = 250 height = 500>
-<img src= "images/im3.PNG" width = 250 height = 500>
+<img src= "images/im6.PNG" width = 250 height = 500>
 
 
