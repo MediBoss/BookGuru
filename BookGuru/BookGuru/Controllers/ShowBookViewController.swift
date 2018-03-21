@@ -17,8 +17,6 @@ import UIKit
  book cell. 
  */
 
-
-
 class ShowBookViewController : UIViewController{
    
     // - MARK : @IBOULETS
@@ -28,7 +26,6 @@ class ShowBookViewController : UIViewController{
     @IBOutlet weak var lastPageReadTextField: UITextField!
     @IBOutlet weak var lastLineReadTextField: UITextField!
     @IBOutlet weak var bookOrPdf: UISegmentedControl!
-    
    
     // - MARK : @IBACTIONS
     
@@ -49,16 +46,12 @@ class ShowBookViewController : UIViewController{
             
             default:
                 print("Invalid Segment Control Index")
-        }
-        
+        } 
     }
-
-    
-    
+  
     // - MARK : PROPERTIES
     
     var book : Book?
-    
     
     // - MARK : VIEW CONTROLLER CYCLE METHODS
     
