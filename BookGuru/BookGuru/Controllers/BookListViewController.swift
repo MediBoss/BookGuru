@@ -16,14 +16,9 @@
  tracks of secgues triggers, and Data Persistence between
  App Lunches using the CoreData Framework.
  */
-
-
-
 import UIKit
 
 class BookListViewController : UITableViewController{
-
-
     // - MAKRK : Properties
     
     // Creates a dynamic array of type Book store each book's information
@@ -33,9 +28,7 @@ class BookListViewController : UITableViewController{
             tableView.reloadData()
         }
     }
-
-
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         userBooks = CoreDataHelper.retrieveBooks()
@@ -90,7 +83,6 @@ class BookListViewController : UITableViewController{
                 print("Unexpected Segue Identifier")
         }
     }
-
 
     // This Function handles the pop segue to avoid memory leaks by using an unwind segue
     @IBAction func unwindWithSegue(_ segue : UIStoryboardSegue){
