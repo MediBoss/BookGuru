@@ -21,7 +21,6 @@ import UIKit
 class BookListViewController : UITableViewController{
     // - MAKRK : Properties
     
-    // Creates a dynamic array of type Book store each book's information
     var userBooks = [Book](){
         didSet {
             // if a book is added or removed, the tableview updates
@@ -34,9 +33,7 @@ class BookListViewController : UITableViewController{
         userBooks = CoreDataHelper.retrieveBooks()
     }
     
-    // - MARK : UITableView Data Source Methods
-    
-    // This function returns the number of rows
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
     return userBooks.count
